@@ -1,0 +1,126 @@
+.banner {
+  color: white;
+  background-color: #1116;
+  background-blend-mode: multiply;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--background-color)), to(transparent));
+  background-image: linear-gradient(to right, var(--background-color), transparent);
+}
+
+.banner__contents {
+  position: relative;
+  z-index: 10;
+  padding-top: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .banner__contents {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.banner__genres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner__genres > * {
+  position: relative;
+}
+
+.banner__genres > *::after {
+  font-size: 2rem;
+  content: ".";
+  position: absolute;
+  right: -1.3rem;
+  color: var(--theme-color);
+  top: -1.1rem;
+}
+
+.banner__genres > *:last-child::after {
+  display: none;
+}
+
+.banner__btn {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.banner__btn:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  -webkit-transition: backgroun-color 0.2s, color 0.2s;
+  transition: backgroun-color 0.2s, color 0.2s;
+}
+
+.banner--fadeBottom {
+  height: 6rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(rgba(37, 37, 37, 0.61)), to(var(--background-color)));
+  background-image: linear-gradient(transparent, rgba(37, 37, 37, 0.61), var(--background-color));
+}
+
+.description--short {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0;
+}
+
+.description--short > * {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.description--short > *::after {
+  content: "|";
+  position: absolute;
+  right: -0.65rem;
+}
+
+.description--short > *:last-child::after {
+  display: none;
+}
+
+.description--full {
+  max-width: 36rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ageGroup {
+  border: 1px solid var(--text-muted);
+  padding: 0 0.2rem;
+}
+/*# sourceMappingURL=Banner.css.map */

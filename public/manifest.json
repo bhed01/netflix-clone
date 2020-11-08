@@ -1,0 +1,15 @@
+{
+  "short_name": "Netflix Clone",
+  "name": "Netflix Cone",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "16x16 24x24 32x32 64x64 72x72 96x96 128x128 256x256",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#e50914",
+  "background_color": "#181818"
+}

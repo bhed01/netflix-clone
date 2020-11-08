@@ -1,0 +1,38 @@
+.videos {
+  padding: 1rem 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .videos {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.videos__title {
+  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.videos__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(360px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.video {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 360px;
+}
+
+.video__title {
+  font-size: 1rem;
+  font-weight: normal;
+}
+/*# sourceMappingURL=Movie.css.map */

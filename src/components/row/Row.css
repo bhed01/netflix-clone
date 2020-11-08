@@ -1,0 +1,116 @@
+.row__title {
+  padding: 1rem 2rem;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 992px) {
+  .row__title {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.row__posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100vw - 1rem);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.scrollBtn {
+  outline: none;
+  border: none;
+  background: none;
+  color: var(--theme-color);
+  position: relative;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .scrollBtn {
+    padding: 0.2rem;
+  }
+}
+
+.scrollBtn > svg {
+  width: 2rem;
+}
+
+.scrollBtn:hover {
+  color: #ff3838;
+}
+
+.scrollBtn::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+  right: -5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--background-color)), to(transparent));
+  background-image: linear-gradient(to right, var(--background-color), transparent);
+}
+
+.scroll--right {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.movie {
+  text-align: center;
+  padding: 0.6rem;
+}
+
+.movie__poster {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 10rem;
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+}
+
+.movie__poster:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.movie__poster--large {
+  height: 18rem;
+}
+
+.movie__title {
+  font-weight: normal;
+  margin-top: 0.5rem;
+}
+
+.op-0 {
+  opacity: 0;
+}
+/*# sourceMappingURL=Row.css.map */

@@ -1,0 +1,86 @@
+.nav {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+.nav--background {
+  background-color: #000e;
+}
+
+.nav__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-left: 1rem;
+}
+
+.nav__elements > a {
+  text-decoration: none;
+  margin: 0 0.5rem;
+  color: var(--text-muted);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav__elements > a:hover {
+  color: #fff;
+}
+
+.nav__logo {
+  height: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (min-width: 576px) {
+  .nav {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav {
+    padding: 1rem 3rem;
+  }
+  .nav__elements {
+    margin-left: 2rem;
+  }
+  .nav__elements > a {
+    margin: 0 1rem;
+  }
+}
+/*# sourceMappingURL=Nav.css.map */

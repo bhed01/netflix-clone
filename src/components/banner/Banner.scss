@@ -1,0 +1,105 @@
+.banner {
+	color: white;
+	background-color: #1116;
+	background-blend-mode: multiply;
+	object-fit: contain;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image: linear-gradient(to right, var(--background-color), transparent);
+	}
+	&__contents {
+		position: relative;
+		z-index: 10;
+		padding-top: 12rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		@media screen and (min-width: 992px) {
+			padding-left: 3rem;
+			padding-right: 3rem;
+		}
+	}
+	&__title {
+		font-size: 3rem;
+		font-weight: 800;
+	}
+	&__genres {
+		display: flex;
+		& > * {
+			position: relative;
+			&::after {
+				font-size: 2rem;
+				content: ".";
+				position: absolute;
+				right: -1.3rem;
+				color: var(--theme-color);
+				top: -1.1rem;
+			}
+			&:last-child::after {
+				display: none;
+			}
+		}
+	}
+
+	// &__btns {
+
+	// }
+	&__btn {
+		padding: 0.5rem 1rem;
+		margin-right: 1rem;
+		cursor: pointer;
+		text-decoration: none;
+		font-size: 1rem;
+		color: #fff;
+		outline: none;
+		border: none;
+		font-weight: 700;
+		border-radius: 0.2vw;
+		background-color: rgba(51, 51, 51, 0.5);
+		&:hover {
+			color: #000;
+			background-color: #e6e6e6;
+			transition: backgroun-color 0.2s, color 0.2s;
+		}
+	}
+	&--fadeBottom {
+		height: 6rem;
+		background-image: linear-gradient(transparent, rgba(37, 37, 37, 0.61), var(--background-color));
+	}
+}
+
+.description {
+	&--short {
+		display: flex;
+		font-size: 0.9rem;
+		color: var(--text-muted);
+		margin: 0.5rem 0;
+		& > * {
+			position: relative;
+			margin-right: 1rem;
+			&::after {
+				content: "|";
+				position: absolute;
+				right: -0.65rem;
+			}
+			&:last-child::after {
+				display: none;
+			}
+		}
+	}
+	&--full {
+		max-width: 36rem;
+		line-height: 1.5rem;
+		margin-bottom: 1rem;
+	}
+}
+.ageGroup {
+	border: 1px solid var(--text-muted);
+	padding: 0 0.2rem;
+}

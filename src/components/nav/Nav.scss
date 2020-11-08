@@ -1,0 +1,52 @@
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	padding: 1rem;
+	transition: background-color 0.3s ease-in;
+	&--background {
+		background-color: #000e;
+	}
+	&__left {
+		display: flex;
+		flex-direction: flex-start;
+		align-items: center;
+	}
+	&__elements {
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		margin-left: 1rem;
+		& > a {
+			text-decoration: none;
+			margin: 0 0.5rem;
+			color: var(--text-muted);
+			transition: color 0.3s;
+			white-space: nowrap;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	&__logo {
+		height: 1.5rem;
+		object-fit: contain;
+	}
+	@media screen and (min-width: 576px) {
+		padding: 1rem 2rem;
+	}
+	@media screen and (min-width: 992px) {
+		padding: 1rem 3rem;
+		&__elements {
+			margin-left: 2rem;
+			& > a {
+				margin: 0 1rem;
+			}
+		}
+	}
+}

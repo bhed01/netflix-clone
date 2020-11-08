@@ -1,0 +1,27 @@
+.videos {
+	padding: 1rem 2rem;
+	@media screen and (min-width: 992px) {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+	&__title {
+		font-weight: normal;
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+		column-gap: 1.5rem;
+		row-gap: 1.5rem;
+	}
+}
+
+.video {
+	justify-self: center;
+	width: 360px;
+	&__title {
+		font-size: 1rem;
+		font-weight: normal;
+	}
+}
